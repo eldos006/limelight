@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="card" style="margin-left: 400px;">
+        {% if data %}
+            {% for el in data %}
+              <img class="card-img-top" src="{{ el.image.url }}" width="500" height="250" style="margin-top: 20px;">
+              <div class="card-body" style="width: 300px;">
+                <h5 class="card-title" style="color: white; font-size: bold; font-style: italic;">{{ el.title }}</h5>
+                <p class="card-text"></p>
+                <a href="{% url 'more-news' %}" class="btn btn-primary">Подробнее</a>
+              </div>
+            {% endfor %}
+        <span>{{ error }}</span>
+        {% endif %}
+    </div>
+{% endblock %}

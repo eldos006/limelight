@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div style="margin-left: 50px;">
+            <img class="img" src="{{ data.img.url }}" width="600px" height="400px">
+            <p>Показы:2003</p>
+            <h2 style="color: white;">{{ data.price }}</h2>
+            <a href="#"><button type="submit" class="btn btn-success">Редактировать</button></a>
+            <a href="{% url 'delete' data.id %}"><button type="submit" class="btn btn-danger" style="margin-left: 20px;">Удалить</button></a>
+          <div class="as">
+              <h3 style="color: white;">Модель: {{ data.model }}</h3>
+              <h3 style="color: white;">Марка: {{ data.marka }}</h3>
+              <h3 style="color: white;">Год: {{ data.year }}</h3>
+              <h3 style="color: white;">Цвет: {{ data.color }}</h3>
+          </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="features" style="width: 640px; margin-left: 300px;">
+    <h1 style="margin-left: 120px;">Новости на сайте</h1>
+        {% if data %}
+            {% for el in data %}
+                <div class="alert alert-warning">
+                    <img src="{{ el.image.url }}" style="width: 600px; height: 300px;">
+                    <p style="color: blue;">{{ el.date }}</p>
+                    <h3>{{ el.title }}</h3>
+                    <h5>{{ el.anons }}</h5>
+                </div>
+            {% endfor %}
+            {% else %}
+            <p>У вас нет записей!</p>
+        {% endif %}
+    </div>
+{% endblock %}

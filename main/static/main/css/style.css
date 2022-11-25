@@ -1,0 +1,92 @@
+/*Navbar*/
+.logo{
+    width: 150px;
+    margin-top: -10px;
+    margin-left: 120px;
+}
+nav{
+    background-color: black;
+}
+#myNavbar{
+    margin-top: 10px;
+    margin-right: 100px;
+    font-size: 15px;
+    font-family: bold;
+}
+/*Header*/
+body{
+    background-color: black;
+}
+.blue_fon{
+    width: 1450px;
+    margin-left: -100px;
+    margin-top: 50px;
+    margin-top: 0px;
+}
+#text-or-fon{
+    margin-left: 120px;
+    position: absolute;
+    margin-top: -600px;
+    font-size: 20px;
+    text-shadow: 0 0 5px white,0 0 10px #00FFFF,0 0 15px #7FFF00,0 0 20px white;
+}
+#container-card{
+    margin-left: 180px;
+}
+#cards{
+    margin-top: 50px;
+}
+#cards img{
+    width: 300px;
+}
+.img-responsive{
+    width: 300px;
+    height: 200px;
+}
+#more{
+    font-size: 30px;
+    margin-left: 250px;
+    margin-top: -20px;
+    position: absolute;
+    color: #00ff00;
+}
+#read-more{
+    margin-left: -30px;
+}
+.asked{
+    margin-top: -20px;
+    margin-left: -30px;
+}
+.img-latest{
+    width: 250px;
+    height: 200px;
+}
+form{
+    margin-left: 40%;
+    width: 500px;
+    margin-top: 30px;
+}
+
+form button{
+    margin-left: 60px;
+}
+.features{
+
+}
+.img-card{
+    width: 300px;
+    height: 200px;
+}
+#card{
+    width: 340px;
+    margin: 20px;
+    margin-left: 50px;
+}
+.features h1{
+    margin-left: 50px;
+}
+p, h4, h1{
+    color: white;
+    font-style: italic;
+    font-family: bold;
+}

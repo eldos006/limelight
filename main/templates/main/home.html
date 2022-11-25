@@ -1,0 +1,96 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="">
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <img src="{% static 'main/img/car_fon.jpg' %}" class="blue_fon">
+      <div id="text-or-fon" class="col-sm-5">
+        <h1>Этот сайт создан именно для вас!</h1>
+        <h4 style="margin-top: 20px;">В этом сайте вы найдёте разные объивление про авто!</h4>
+        <h4 style="margin-top: 40px;">Подписивайтесь на нас чтобы не пропускать интересные вещи про авто!</h4>
+        <input type="email" placeholder="Что ищем?" style="height: 35px; margin-top: 20px;">
+        <a href="#"><button class="btn btn-success" type="submit">SIGN UP</button></a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" id="container-card">
+  <h1 class="Some"><img src="" style="width: 8px; height: 80px; margin-top: 5px; background-color: #00ff00;"> АВТО</h1><br><h4 style="margin-top: -50px; margin-left: 20px;">Авто на любой вкус!</h4>
+  <div class="row" id="cards">
+    {% for i in data %}
+      <div class="col-sm-4">
+        <img src="{{ i.img.url }}" class="img-responsive" alt="Image" width="70%">
+        <h4>{{ i.price }}</h4><a href="{% url 'more' i.id %}"><i id="more" class="fa-solid fa-circle-chevron-right"></i></a>
+        <p style="margin-top: -10px;">{{ i.model }}</p>
+      </div>
+    {% endfor %}
+
+</div><br>
+<div class="jumbotron text-center" style="width: 1400px; background-color: #00ffff; margin-left: -200px;">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-9">
+      <i class="fa-solid fa-quote-left" style="font-size:50px;margin-left: -450px; margin-top: -10px; position: absolute;"></i><p style="color: black;">I absolutely love your freebies!</p><i class="fa-solid fa-quote-right" style="font-size:50px;margin-left: 400px; margin-top: -55px; position: absolute;"></i>
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+  </div>
+</div>
+<div class="container" style="margin-left: 0px; width: 1100px;">
+  <h1 class="Some"><img src="{% static 'main/page/зелёный_фон.jpg' %}" style="width: 8px; height: 80px; margin-top: 5px; background-color: #00ff00;"> НОВОСТИ</h1><br><h4 style="margin-top: -50px; margin-left: 20px;">Интересные новости о машинах!</h4>
+  <div class="row" style="margin-top: 100px;">
+    <div class="col-sm-4">
+      <img src="{% static 'main/img/index2.jpeg' %}" class="img-latest" alt="Image" width="70%">
+    </div>
+    <div class="col-sm-7">
+      <div class="asked">
+      <h1>Красные машины в Шанхае!</h1>
+      <h6>Posted on July 28, 2013 • James Reed • Technology</h6>
+      <h4> В Шанхае (Китай) запрещены автомобили красного цвета.</h4>
+      </div>
+      <a href="{% url 'more-news' %}"><p><i id="read-more" class="fa-solid fa-circle-chevron-right"></i> Read More</p></a>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-left: 0px; margin-top: 100px; width: 1100px">
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="{% static 'main/img/bugatti.webp' %}" class="img-latest" alt="Image" width="70%">
+    </div>
+    <div class="col-sm-7">
+      <div class="asked">
+      <h1>Самый дорого продоваемый автомобиль!</h1>
+      <h6>June 3, 2013 • Miko Ivan • Technology</h6>
+      <h4>4. Самым дорогим когда-либо продаваемым автомобилем для города была модель Bugatti Rovale стоимостью 8 млн. 700 тыс. $ США</h4>
+      </div>
+      <a href="{% url 'more-news' %}"><p><i id="read-more" class="fa-solid fa-circle-chevron-right"></i> Read More</p></a>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-left: 0px; margin-top: 100px; width: 1100px">
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="{% static 'main/img/primnik.webp' %}" class="img-latest" alt="Image" width="70%">
+    </div>
+    <div class="col-sm-7">
+      <div class="asked">
+      <h1 style="margin-top: 10px;">Первый радиоприемник!</h1>
+      <h6>March 28, 2013 • Uku Mason • Apps</h6>
+      <h4>Первый радиоприемник был изобретен в 1929 году.</h4>
+      </div>
+      <a href="{% url 'more-news' %}"><p><i id="read-more" class="fa-solid fa-circle-chevron-right"></i> Read More</p></a>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

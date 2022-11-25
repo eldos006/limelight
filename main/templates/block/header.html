@@ -1,0 +1,22 @@
+{% load static %}
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img class="logo" src="{% static 'main/img/logo_limelight.png' %}"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'home' %}"><i id="home" class="fa-solid fa-house"></i></a></li>
+        <li class="active"><a href="{% url 'index' %}">Авто</a></li>
+        <li><a href="{% url 'news' %}">Новости</a></li>
+        <li><a href="{% url 'form' %}">Добавить запись</a></li>
+        <li><a href="{% url 'news_form' %}">Добавить новость</a></li>
+      </ul>
+  </div>
+  </div>
+</nav>

@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="form">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.image }}<br>
+            {{ form.title }}<br><br>
+            {{ form.data }}<br><br>
+            {{ form.anons }}<br><br>
+            <button class="btn btn-success" type="submit" id="form-button">Добавить</button><br>
+        </form>
+    </div>
+{% endblock %}
